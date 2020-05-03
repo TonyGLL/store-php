@@ -1,0 +1,316 @@
+/* ====== GENERALS ====== */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background: url(../img/bg.png);
+}
+
+a{
+    color: #01b1ea;
+    transition: .3s all ease;
+}
+
+a:visited{
+    color: #01b1ea;
+}
+
+a:hover{
+    color: #555;
+}
+
+.alert_green{
+    background: #5ad862;
+    color: #185f1d;
+    border: 1px solid #185f1d;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.alert_red{
+    background: #e76154;
+    color: #6a241d;
+    border: 1px solid #6a241d;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+/* ===== CONTAINER ===== */
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== HEADER ===== */
+#header{
+    margin-top: 15px;
+    height: 145px;
+    background: #1c92d2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f2fcfe, #1c92d2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f2fcfe, #1c92d2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin-bottom: 10px;
+    border-radius: 0px 0px 5px 5px;
+    box-shadow: 0px 0px 10px gray;
+}
+
+#logo{
+    padding: 20px;
+    margin-left: 20px;
+    float: left;
+}
+
+#logo img{
+    height: 100px;
+    float: left;
+}
+
+#logo a{
+    float: left;
+    font-size: 30px;
+    letter-spacing: 4px;
+    font-family: 'Permanent Marker', cursive, "Opens Sans", Helvetica, Arial;   
+    text-transform: uppercase;
+    color: #2697D4;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 18px;
+    margin-left: 25px;
+    text-shadow: 0px 2px 1px #222222;
+    transition: all ease 0.3s;
+}
+
+#logo a:hover{
+    text-shadow: 0px 2px 1px #222222, 0px 0px 4px #2697D4;
+}
+
+/* ===== MENU ===== */
+#menu{
+    clear: both;
+    background: #222222;
+    box-shadow: 0px 0px 10px gray;
+    margin-bottom: 10px;
+    color: white;
+    height: 45px;
+    border-radius: 3px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+
+
+#menu ul{
+    list-style: none;
+    text-decoration: none;
+    margin: 0px auto;
+    margin-left: 25px;
+}
+
+#menu ul li{
+    line-height: 45px;
+    float: left;
+    border-right: 1px solid #363636;
+}
+
+#menu a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding-left: 12px;
+    padding-right: 10px;
+    text-shadow: 0px 0px 1px #fff;
+}
+
+#menu a:hover{
+    background: #1c92d2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to center, #f2fcfe, #1c92d2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to center, #f2fcfe, #1c92d2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    text-shadow: 0px 0px 1px #000;
+}
+
+#menu a:first-child{
+    border-left: 1px solid #363636;
+}
+
+/* ===== CONTENT ===== */
+#content{
+    margin: 0px auto;
+    overflow: hidden;
+}
+
+/* ===== SIDEBAR ===== */
+#sidebar{
+    box-shadow: -5px -1px 5px #ddd;
+    min-height: 500px;
+    background: white;
+    width: 315px;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#sidebar .block_aside{
+    display: block;
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+}
+
+#sidebar h3{
+    border-radius: 5px 5px 0px 0px;
+    padding: 12px;
+    display: block;
+    color: #222;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    font-family: "Open Sans", sans-serif;
+    background: #1c92d2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to center, #f2fcfe, #1c92d2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to center, #f2fcfe, #1c92d2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#sidebar ul{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#sidebar ul li{
+    list-style: square;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* ===== FORMS ===== */
+label,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select{
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    width: 95%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select{
+    border: 1px solid #c9c9c9;
+    box-shadow: 0px 0px 2px #ccc inset;
+    background: #fff;
+    padding: 7px;
+    color: gray;
+    transition: all ease 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus{
+    border: 1px solid #1579b5;
+    color: black;
+}
+
+button, .button{
+    border: none;
+    display: block;
+    border-radius: 3px;
+    width: auto;
+    padding: 10px 20px;
+    color: white;
+    background: #2979cd;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.button{
+    background: #319137;
+    color: white !important;
+    text-decoration: none;
+}
+
+.button:hover{
+    background: rgba(49, 145, 55, .8);
+}
+
+label,
+input[type="button"],
+input[type="submit"],
+button{
+    display: block;
+    margin-top: 10px;
+}
+
+
+/* ===== MAIN ===== */
+#central{
+    box-shadow: -5px 1px 5px #ddd;
+    background: white;
+    width: 875px;
+    float: left;
+    border-radius: 5px;
+    padding: 0px 25px;
+    min-height: 500px;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+}
+
+#central h1{
+    color: #555;
+    font-size: 38px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    font-weight: normal;
+    text-align: center;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #ccc;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== PRODUCTS ===== */
+.product{
+    width: 30%;
+    float: left;
+    border: 1px solid #ccc;
+    margin-left: 21px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+}
+
+.product h2{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product img{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100px;
+}
+
+.product p{
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* ===== FOOTER ===== */
+#footer{
+    border-radius: 5px 5px 0px 0px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    background: #222222;
+    clear: both;
+}
