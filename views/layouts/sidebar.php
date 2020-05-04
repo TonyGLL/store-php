@@ -21,6 +21,12 @@
                 <button type="submit">Sign in</button>
             </form>
 
+            <ul class="sign-up">
+                <li>
+                    Don't have an account?<a href="<?=base_url?>usuario/register" class="underline"> Click here</a>
+                </li>
+            </ul>
+
             
         <?php else: ?>
                 
@@ -31,7 +37,7 @@
                 <?php if(isset($_SESSION['admin'])) : ?>
 
                     <li>
-                        <a href=""><i class="fas fa-arrow-circle-right"></i> Manage Categories</a>
+                        <a href="<?=base_url?>categoria/index"><i class="fas fa-arrow-circle-right"></i> Manage Categories</a>
                     </li>
                     
                     <li>
@@ -44,16 +50,22 @@
 
                 <?php endif; ?>
                     
-                <li>
-                    <a href=""><i class="fas fa-arrow-circle-right"></i> My Orders</a>
-                </li>
+                <?php if(isset($_SESSION['identity'])) : ?>
 
-                <li>
-                    <a href="<?=base_url?>usuario/logout"><i class="fas fa-arrow-circle-right"></i> Sign off</a>
-                </li>
+                    <li>
+                        <a href=""><i class="fas fa-arrow-circle-right"></i> My Orders</a>
+                    </li>
+
+                    <li>
+                        <a href="<?=base_url?>usuario/logout"><i class="fas fa-arrow-circle-right"></i> Sign off</a>
+                    </li>
+
+                <?php endif; ?>
+                
             </ul>
-
+            
         <?php endif; ?>
+
 
     </div>
 

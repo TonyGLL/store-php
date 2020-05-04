@@ -39,6 +39,36 @@ a:hover{
     border-radius: 4px;
 }
 
+table{
+    border-radius: 3px;
+    padding: 5px;
+    width: 100%;
+    border: 1px solid #555;
+}
+
+tr > th{
+    font-size: 24px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+td{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    border-radius: 3px;
+    padding: 5px;
+    border-top: 1px solid #ccc;
+}
+
+.buttons{
+    width: 100px;
+}
+
+.underline{
+    text-decoration: underline !important;
+}
+
 /* ===== CONTAINER ===== */
 .container{
     width: 90%;
@@ -241,6 +271,30 @@ button, .button{
     background: #319137;
     color: white !important;
     text-decoration: none;
+}
+
+.button-small{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    padding: 10px 5px;
+    width: 140px;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.button-option{
+    text-align: center;
+    width: 80px;
+    margin-bottom: 3px;
+}
+
+.button-delete-category{
+    background: #c23f31;
+}
+
+.button-delete-category:hover{
+    background: rgba(194, 63, 49, .8) !important;
 }
 
 .button:hover{

@@ -33,27 +33,18 @@
         </header>
 
         <!-- MENU -->
-        <nav id="menu">
-            <ul>
-                <li>
-                    <a href="">Home</a>
-                </li>
-                <li>
-                    <a href="">Categoria 1</a>
-                </li>
-                <li>
-                    <a href="">Categoria 2</a>
-                </li>
-                <li>
-                    <a href="">Categoria 3</a>
-                </li>
-                <li>
-                    <a href="">Categoria 4</a>
-                </li>
-                <li>
-                    <a href="">Categoria 5</a>
-                </li>
-            </ul>
-        </nav>
+        <?php $categorias = Utils::showCategories(); ?>
+            <nav id="menu">
+                <ul>
+                    <li>
+                        <a href="">Home</a>
+                    </li>
+                    <?php while($cat = $categorias->fetch_object()) : ?>
+                        <li>
+                            <a href=""><?=$cat->nombre?></a>
+                        </li>
+                    <?php endwhile; ?>
+                </ul>
+            </nav>
 
         <div id="content">
