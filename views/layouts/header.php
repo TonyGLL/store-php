@@ -8,6 +8,9 @@
 
     <link rel="shortcut icon" href="<?=base_url?>assets/img/camiseta.png" type="image/x-icon">
 
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/b60c38e26d.js" crossorigin="anonymous"></script>
+
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Permanent+Marker&display=swap" rel="stylesheet">
 
