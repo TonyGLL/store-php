@@ -39,6 +39,20 @@ a:hover{
     border-radius: 4px;
 }
 
+.alert_yellow{
+    background: #d0d645;
+    color: #5b5e15;
+    border: 1px solid #5b5e15;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.space{
+    margin-bottom: 20px;
+    width: auto;
+    font-weight: bold;
+}
+
 table{
     border-radius: 3px;
     padding: 5px;
@@ -47,7 +61,7 @@ table{
 }
 
 tr > th{
-    font-size: 24px;
+    font-size: 18px;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -55,7 +69,7 @@ tr > th{
 td{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 14px;
     border-radius: 3px;
     padding: 5px;
     border-top: 1px solid #ccc;
@@ -69,6 +83,10 @@ td{
     text-decoration: underline !important;
 }
 
+.thumb{
+    width: 100px;
+}
+
 /* ===== CONTAINER ===== */
 .container{
     width: 90%;
@@ -78,38 +96,35 @@ td{
 
 /* ===== HEADER ===== */
 #header{
-    margin-top: 15px;
-    height: 145px;
+    height: 250px;
     background: #1c92d2;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #f2fcfe, #1c92d2);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #f2fcfe, #1c92d2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    margin-bottom: 10px;
-    border-radius: 0px 0px 5px 5px;
-    box-shadow: 0px 0px 10px gray;
+    margin-bottom: 5px;
 }
 
 #logo{
-    padding: 20px;
+    padding: 50px;
     margin-left: 20px;
     float: left;
 }
 
 #logo img{
-    height: 100px;
+    height: 150px;
     float: left;
 }
 
 #logo a{
     float: left;
-    font-size: 30px;
-    letter-spacing: 4px;
+    font-size: 55px;
+    letter-spacing: 10px;
     font-family: 'Permanent Marker', cursive, "Opens Sans", Helvetica, Arial;   
     text-transform: uppercase;
     color: #2697D4;
     font-weight: bold;
     text-decoration: none;
     margin-top: 18px;
-    margin-left: 25px;
+    margin-left: 35px;
     text-shadow: 0px 2px 1px #222222;
     transition: all ease 0.3s;
 }
@@ -122,7 +137,6 @@ td{
 #menu{
     clear: both;
     background: #222222;
-    box-shadow: 0px 0px 10px gray;
     margin-bottom: 10px;
     color: white;
     height: 45px;
@@ -174,14 +188,12 @@ td{
 
 /* ===== SIDEBAR ===== */
 #sidebar{
-    box-shadow: -5px -1px 5px #ddd;
     height: 100%;
     background: white;
     width: 315px;
     float: left;
     margin-right: 10px;
     margin-bottom: 10px;
-    border-radius: 5px;
     padding-bottom: 10px;
 }
 
@@ -228,7 +240,8 @@ label,
 input[type="text"],
 input[type="password"],
 input[type="email"],
-select{
+select,
+textarea{
     font-family: Arial, Helvetica, sans-serif;
     display: block;
     width: 95%;
@@ -239,7 +252,9 @@ select{
 input[type="text"],
 input[type="password"],
 input[type="email"],
-select{
+input[type="number"],
+select,
+textarea{
     border: 1px solid #c9c9c9;
     box-shadow: 0px 0px 2px #ccc inset;
     background: #fff;
@@ -284,6 +299,7 @@ button, .button{
 }
 
 .button-option{
+    padding: 5px 10px;
     text-align: center;
     width: 80px;
     margin-bottom: 3px;
@@ -312,11 +328,9 @@ button{
 
 /* ===== MAIN ===== */
 #central{
-    box-shadow: -5px 1px 5px #ddd;
     background: white;
     width: 875px;
     float: left;
-    border-radius: 5px;
     padding: 0px 25px;
     min-height: 500px;
     margin-bottom: 10px;

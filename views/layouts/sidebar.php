@@ -41,7 +41,7 @@
                     </li>
                     
                     <li>
-                        <a href=""><i class="fas fa-arrow-circle-right"></i> Manage Products</a>
+                        <a href="<?=base_url?>producto/gestion"><i class="fas fa-arrow-circle-right"></i> Manage Products</a>
                     </li>
                     
                     <li>
