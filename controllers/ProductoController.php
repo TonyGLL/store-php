@@ -5,8 +5,26 @@ class ProductoController{
     // Vista inicial
     public function index(){
 
+        $producto = new Producto();
+        $productos = $producto->getRandom(6);
+
         // Renderizar vista
         require_once "views/producto/best_sellers.php";
+    }
+
+    public function ver(){
+
+        if (isset($_GET['id'])) {
+
+            $id = $_GET['id'];
+
+            $producto = new Producto();
+            $producto->setId($id);
+
+            $product = $producto->getOne();
+    
+        }
+        require_once "views/producto/ver.php";
     }
 
     public function gestion(){
@@ -64,7 +82,7 @@ class ProductoController{
                             mkdir('uploads/images', 0777, true);
                         }
     
-                        move_uploaded_file($file['tmp_name'], 'uploads/images' . $filename);
+                        move_uploaded_file($file['tmp_name'], 'uploads/images/' . $filename);
                         $producto->setImagen($filename);
                     }
                 }

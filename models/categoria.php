@@ -26,7 +26,7 @@ class Categoria{
     /* ===== SETTERS ===== */
     function setId($id){
 
-        $this->$id = $id;
+        $this->id = $id;
     }
 
     function setNombre($nombre){
@@ -37,9 +37,16 @@ class Categoria{
     /* ===== METHODS ===== */
     public function getAll(){
 
-        $categorias = $this->db->query("SELECT * FROM categorias ORDER BY id DESC");
+        $categorias = $this->db->query("SELECT * FROM categorias ORDER BY id DESC;");
 
         return $categorias;
+    }
+
+    public function getOne(){
+
+        $categoria = $this->db->query("SELECT * FROM categorias WHERE id = {$this->getId()};");
+
+        return $categoria->fetch_object();
     }
 
     public function save(){

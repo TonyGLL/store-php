@@ -1,44 +1,21 @@
-<h1>Best Sellers</h1>
+<h1>Some of our Products</h1>
 
-<div class="product">
-    <img src="assets/img/camiseta.png" alt="">
-    <h2>Wide Blue T-shirt</h2>
-    <p>30 euros</p>
-    <a href="" class="button">Buy</a>
-</div>
 
-<div class="product">
-    <img src="assets/img/camiseta.png" alt="">
-    <h2>Wide Blue T-shirt</h2>
-    <p>30 euros</p>
-    <a href="" class="button">Buy</a>
-</div>
+<?php while($product = $productos->fetch_object()) : ?>
+    <div class="product">
 
-<div class="product">
-    <img src="assets/img/camiseta.png" alt="">
-    <h2>Wide Blue T-shirt</h2>
-    <p>30 euros</p>
-    <a href="" class="button">Buy</a>
-</div>
+        <a href="<?=base_url?>producto/ver&id=<?=$product->id?>">
 
-<div class="product">
-    <img src="assets/img/camiseta.png" alt="">
-    <h2>Wide Blue T-shirt</h2>
-    <p>30 euros</p>
-    <a href="" class="button">Buy</a>
-</div>
+            <?php if($product->imagen != NULL) : ?>
+                <img src="<?=base_url?>uploads/images/<?=$product->imagen?>" alt="">
+            <?php else: ?>
+                <img src="assets/img/camiseta.png" alt="">
+            <?php endif; ?>
+            <h2><?=$product->nombre?></h2>
 
-<div class="product">
-    <img src="assets/img/camiseta.png" alt="">
-    <h2>Wide Blue T-shirt</h2>
-    <p>30 euros</p>
-    <a href="" class="button">Buy</a>
-</div>
+        </a>
 
-<div class="product">
-    <img src="assets/img/camiseta.png" alt="">
-    <h2>Wide Blue T-shirt</h2>
-    <p>30 euros</p>
-    <a href="" class="button">Buy</a>
-</div>
-</div>
+        <p>$ <?=$product->precio?></p>
+        <a href="" class="button button-buy">Buy</a>
+    </div>
+<?php endwhile; ?>
