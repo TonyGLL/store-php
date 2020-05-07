@@ -1,9 +1,28 @@
 <!-- SIDEBAR -->
 <aside id="sidebar">
 
-    <!-- LOGIN -->
+    <div id="carrito" class="block_aside">
+        <h3>My Cart</h3>
 
-    
+        <ul>
+
+            <?php $stats = Utils::statsCarrito(); ?>
+            <li>
+                <a href="<?=base_url?>carrito/index"><i class="fas fa-arrow-circle-right"></i> Products (<?=$stats['count']?>)</a>
+            </li>
+
+            <li>
+                <a href="<?=base_url?>carrito/index"><i class="fas fa-arrow-circle-right"></i> Total: $<?=$stats['total']?></a>
+            </li>
+
+            <li>
+                <a href="<?=base_url?>carrito/index"><i class="fas fa-arrow-circle-right"></i> View Cart</a>
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- LOGIN -->
     <div id="login" class="block_aside">
 
         <?php if(!isset($_SESSION['identity'])) : ?>
@@ -45,7 +64,7 @@
                     </li>
                     
                     <li>
-                        <a href=""><i class="fas fa-arrow-circle-right"></i> Manage Orders</a>
+                        <a href="<?=base_url?>pedido/gestion"><i class="fas fa-arrow-circle-right"></i> Manage Orders</a>
                     </li>
 
                 <?php endif; ?>
@@ -53,7 +72,7 @@
                 <?php if(isset($_SESSION['identity'])) : ?>
 
                     <li>
-                        <a href=""><i class="fas fa-arrow-circle-right"></i> My Orders</a>
+                        <a href="<?=base_url?>pedido/mis_pedidos"><i class="fas fa-arrow-circle-right"></i> My Orders</a>
                     </li>
 
                     <li>

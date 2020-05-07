@@ -57,7 +57,7 @@ table{
     border-radius: 3px;
     padding: 5px;
     width: 100%;
-    border: 1px solid #555;
+    border-bottom: 1px solid #ccc;
 }
 
 tr > th{
@@ -403,7 +403,13 @@ button{
     width: 350px;
 }
 
+.img_carrito{
+    height: 50px;
+}
+
 .detail-product .data{
+    text-align: center;
+    margin-top: 100px;
     display: block;
     padding-left: 5%;
 }
@@ -437,4 +443,52 @@ button{
     text-align: center;
     border-radius: 5px;
     height: 40px;
+}
+
+/* ===== CARRITO ===== */
+.total-carrito{
+    width: 250px;
+    float: right;
+}
+
+.total-carrito h3{
+    float: left;
+    display: block;
+    margin-top: 8px;
+}
+
+.delete-carrito{
+    float: left;
+}
+
+.button-pedido{
+    padding: 10px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    float: right;
+    width: 100px;
+}
+
+.button-delete-order{
+    width: 110px;
+    background: #c23f31;
+    padding: 10px 15px;
+}
+
+.button-delete-order:hover{
+    background: rgba(194, 63, 49, .8);
+}
+
+.updown-unidades{
+    width: 60px;
+    margin: 0px auto;
+}
+
+.updown-unidades .button{
+    width: 20px;
+    display: block;
+    float: left;
+    padding: 2px;
+    margin-left: 7px;
+    margin-top: 7px;
 }

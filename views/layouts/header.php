@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>T-Shirt Shop</title>
 
-    <link rel="shortcut icon" href="<?=base_url?>assets/img/camiseta.png" type="image/x-icon">
+    <link rel="shortcut icon" href="<?=base_url?>assets/img/1.png" type="image/x-icon">
 
     <!-- FONT AWESOME -->
     <script src="https://kit.fontawesome.com/b60c38e26d.js" crossorigin="anonymous"></script>
@@ -25,7 +25,7 @@
         <!-- HEADER -->
         <header id="header">
             <div id="logo">
-                <img src="<?=base_url?>assets/img/camiseta.png" alt="Logo T-Shirt">
+                <img src="<?=base_url?>assets/img/1.png" alt="Logo T-Shirt">
                 <a href="<?=base_url?>">
                     T-shirt shop
                 </a>
